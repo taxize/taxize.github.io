@@ -3,9 +3,7 @@ layout: default
 title: Home
 ---
 
-<!-- <i class="fa fa-bars"></i> -->
-
-> taxize is a taxonomic toolbelt for R and Python
+# taxize <i class="fa fa-sun-o"></i> taxonomic toolbelt for R & Python
 
 Taxonomy deals with the names of living things - well, in this context, we're dealing with living things. So let's call it biological taxonomy. 
 
@@ -25,17 +23,18 @@ col_children(name = "Apis")
 And you get 
 
 {% highlight coffee %}
-       id                name     rank
-0  6971712  Apis andreniformis  Species
-1  6971713         Apis cerana  Species
-2  6971714        Apis dorsata  Species
-3  6971715         Apis florea  Species
-4  6971716  Apis koschevnikovi  Species
-5  6845885      Apis mellifera  Species
-6  6971717    Apis nigrocincta  Species
+    id                name     rank
+6971712  Apis andreniformis  Species
+6971713         Apis cerana  Species
+6971714        Apis dorsata  Species
+6971715         Apis florea  Species
+6971716  Apis koschevnikovi  Species
+6845885      Apis mellifera  Species
+6971717    Apis nigrocincta  Species
 {% endhighlight %}
 
-Awesome eh!?
+Awesome eh.
+
 
 ### Python
 
@@ -45,49 +44,16 @@ pytaxize.col_children(name = ["Apis"])
 {% endhighlight %}
 
 {% highlight python %}
-[        id                name     rank
-0  6971712  Apis andreniformis  Species
-1  6971713         Apis cerana  Species
-2  6971714        Apis dorsata  Species
-3  6971715         Apis florea  Species
-4  6971716  Apis koschevnikovi  Species
-5  6845885      Apis mellifera  Species
-6  6971717    Apis nigrocincta  Species]
+[    id                name     rank
+6971712  Apis andreniformis  Species
+6971713         Apis cerana  Species
+6971714        Apis dorsata  Species
+6971715         Apis florea  Species
+6971716  Apis koschevnikovi  Species
+6845885      Apis mellifera  Species
+6971717    Apis nigrocincta  Species]
 {% endhighlight %}
 
 -----
 
 Want to see something else added? Open an <a href="https://github.com/ropensci/taxize/issues/new">R</a> or <a href="https://github.com/sckott/pytaxize/issues/new">Python</a> issue.
-
-<!-- <div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div> -->
