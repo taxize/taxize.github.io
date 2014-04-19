@@ -4,7 +4,7 @@
  <title>taxize</title>
  <link href="http://recology.info/taxize//atom.xml" rel="self"/>
  <link href="http://recology.info/taxize//"/>
- <updated>2014-04-19T08:00:11-07:00</updated>
+ <updated>2014-04-19T08:13:01-07:00</updated>
  <id>http://recology.info/taxize/</id>
  <author>
    <name>Scott Chamberlain</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>taxize</title>
+   <title></title>
    <link href="http://recology.info/taxize//2012/02/07/taxize/"/>
    <updated>2012-02-07T00:00:00-08:00</updated>
    <id>http://recology.info/taxize//2012/02/07/taxize</id>
