@@ -83,6 +83,14 @@
           
         
       
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/Sources/">Sources</a>
+            </li>
+          
+        
+      
 
       <li class="sidebar-nav-item"><a href="https://github.com/ropensci/taxize/archive/v.zip">Download</a></li>
       <li class="sidebar-nav-item"><a href="https://github.com/ropensci/taxize">GitHub project</a></li>
@@ -105,22 +113,51 @@
 
     <!-- <span class="post-date">07 Feb 2012</span> -->
 
-    <p><i class="fa fa-bars"></i></p>
+    <!-- <i class="fa fa-bars"></i> -->
 
-<h2>Stuff</h2>
+<blockquote>
+<p>taxize is a taxonomic toolbelt for R and Python</p>
+</blockquote>
 
-<p>XXXXX.</p>
+<p>Taxonomy deals with the names of living things - well, in this context, we&#39;re dealing with living things. So let&#39;s call it biological taxonomy. </p>
 
-<h3>Sub-heading</h3>
+<p>Almost all biologists are likely to deal with names, whether they study a single species or 10 species, or 10,000 species. Organism names are created by people - thus they are messy of course. Two different names can be given to the same species, and two completely different taxonomic groups could have the identical name at different taxonomic ranks. All these problems and more make it so that you of course want to do your taxonomic sleuthing with a powerful, repeatable, for-loopable, tool. </p>
 
-<div class="highlight"><pre><code class="coffee"><span class="nx">library</span><span class="p">(</span><span class="s">&quot;rMaps&quot;</span><span class="p">)</span>
-<span class="nx">L2</span> <span class="o">&lt;-</span> <span class="nx">Leaflet$new</span><span class="p">()</span>
-<span class="nx">L2$setView</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="mf">29.7632836</span><span class="p">,</span>  <span class="o">-</span><span class="mf">95.3632715</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
-<span class="nx">L2$tileLayer</span><span class="p">(</span><span class="nv">provider = </span><span class="s">&quot;MapQuestOpen.OSM&quot;</span><span class="p">)</span>
-<span class="nx">L2</span>
+<p>We created a tool to ease the headache of taxonomy. What makes it possible is the many online taxonomy databases that we can give you an interface to. Take a look at the sources of taxonomic databases we wrap in taxize at the <a href="/Sources">Sources</a> page.</p>
+
+<p>What can you actually do? Let&#39;s take a look.</p>
+
+<h3>R</h3>
+
+<div class="highlight"><pre><code class="coffee"><span class="nx">uids</span> <span class="o">&lt;-</span> <span class="nx">get_uid</span><span class="p">(</span><span class="nx">c</span><span class="p">(</span><span class="s">&quot;Chironomus riparius&quot;</span><span class="p">,</span> <span class="s">&quot;Chaetopteryx&quot;</span><span class="p">))</span>
+<span class="nx">out</span> <span class="o">&lt;-</span> <span class="nx">classification</span><span class="p">(</span><span class="nx">uids</span><span class="p">)</span>
+<span class="nx">lapply</span><span class="p">(</span><span class="nx">out</span><span class="p">,</span> <span class="nx">head</span><span class="p">)</span>
 </code></pre></div>
 
-<h3>Sub-heading</h3>
+<p>And you get </p>
+
+<div class="highlight"><pre><code class="coffee"><span class="p">[[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="nx">name</span>         <span class="nx">rank</span>
+<span class="mi">1</span> <span class="nx">cellular</span> <span class="nx">organisms</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">2</span>          <span class="nx">Eukaryota</span> <span class="nx">superkingdom</span>
+<span class="mi">3</span>       <span class="nx">Opisthokonta</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">4</span>            <span class="nx">Metazoa</span>      <span class="nx">kingdom</span>
+<span class="mi">5</span>          <span class="nx">Eumetazoa</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">6</span>          <span class="nx">Bilateria</span>      <span class="kc">no</span> <span class="nx">rank</span>
+
+<span class="p">[[</span><span class="mi">2</span><span class="p">]]</span>
+                <span class="nx">name</span>         <span class="nx">rank</span>
+<span class="mi">1</span> <span class="nx">cellular</span> <span class="nx">organisms</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">2</span>          <span class="nx">Eukaryota</span> <span class="nx">superkingdom</span>
+<span class="mi">3</span>       <span class="nx">Opisthokonta</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">4</span>            <span class="nx">Metazoa</span>      <span class="nx">kingdom</span>
+<span class="mi">5</span>          <span class="nx">Eumetazoa</span>      <span class="kc">no</span> <span class="nx">rank</span>
+<span class="mi">6</span>          <span class="nx">Bilateria</span>      <span class="kc">no</span> <span class="nx">rank</span>
+</code></pre></div>
+
+<p>Awesome eh!?</p>
+
+<h3>Python</h3>
 
 <p>XXXX</p>
 
