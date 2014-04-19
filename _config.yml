@@ -3,14 +3,15 @@ markdown:         redcarpet
 pygments:         true
 
 # Permalinks
-permalink:        pretty
+# permalink:        pretty
+permalink:		  /examples/:title/
 
 # Setup
 title:            taxize
 tagline:          'taxize'
 description:      'taxonomic toolbelt for R and Python'
 url:              http://recology.info/taxize/
-paginate_path:    "examples/page:num"
+paginate_path:    "/examples/page:num"
 
 author:
   name:           'Scott Chamberlain'

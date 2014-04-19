@@ -4,7 +4,7 @@
  <title>taxize</title>
  <link href="http://recology.info/taxize//atom.xml" rel="self"/>
  <link href="http://recology.info/taxize//"/>
- <updated>2014-04-19T08:56:15-07:00</updated>
+ <updated>2014-04-19T09:18:01-07:00</updated>
  <id>http://recology.info/taxize/</id>
  <author>
    <name>Scott Chamberlain</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Working with taxonomic ids</title>
-   <link href="http://recology.info/taxize//2014/04/19/ids/"/>
+   <link href="http://recology.info/taxize//examples/ids/"/>
    <updated>2014-04-19T00:00:00-07:00</updated>
-   <id>http://recology.info/taxize//2014/04/19/ids</id>
+   <id>http://recology.info/taxize//examples/ids</id>
    <content type="html">&lt;h2&gt;taxize tries to make it easy to get identifiers from the various database sources&lt;/h2&gt;
 
 &lt;p&gt;Here, get identifiers from 5 different sources for &lt;em&gt;Poa annua&lt;/em&gt;. Then we can pass those ideas to other functions that act on those ids without any other input&lt;/p&gt;

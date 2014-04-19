@@ -10,7 +10,7 @@
 
   <title>
     
-      Contribute &middot; taxize
+      Install &middot; taxize
     
   </title>
 
@@ -57,24 +57,24 @@
       
         
           
+            <li class="sidebar-nav-item">
+              <a href="/Contribute.html">Contribute</a>
+            </li>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
             <li class="sidebar-nav-item active">
-              <a href="/Contribute/">Contribute</a>
-            </li>
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            <li class="sidebar-nav-item">
-              <a href="/Install/">Install</a>
+              <a href="/Install.html">Install</a>
             </li>
           
         
@@ -82,7 +82,7 @@
         
           
             <li class="sidebar-nav-item">
-              <a href="/Sources/">Sources</a>
+              <a href="/Sources.html">Sources</a>
             </li>
           
         
@@ -100,25 +100,37 @@
 
     <div class="content container">
       <div class="page">
-  <h1 class="page-title">Contribute</h1>
-  <p>Contributing is easy!  </p>
+  <h1 class="page-title">Install</h1>
+  <h2>R</h2>
 
-<p><i class="fa fa-bug fa-3x"></i></p>
+<p>Stable version from CRAN</p>
 
-<p>Issues - Just go over to Github for <a href="https://github.com/ropensci/taxize">R</a> or <a href="https://github.com/sckott/pytaxize">Python</a> and file an issue if you have a question or found a bug, etc. </p>
+<div class="highlight"><pre><code class="coffee"><span class="nx">install</span><span class="p">.</span><span class="nx">packages</span><span class="p">(</span><span class="s">&quot;taxize&quot;</span><span class="p">)</span>
+</code></pre></div>
 
-<p><i class="fa fa-code-fork fa-3x"></i></p>
+<p>Development version </p>
 
-<p>Forking - If you want to contribute code:</p>
+<div class="highlight"><pre><code class="coffee"><span class="nx">install</span><span class="p">.</span><span class="nx">packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+<span class="nx">library</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span>
+<span class="nx">install_github</span><span class="p">(</span><span class="s">&quot;ropesnci/taxize&quot;</span><span class="p">)</span>
+<span class="nx">library</span><span class="p">(</span><span class="s">&quot;taxize&quot;</span><span class="p">)</span>
+</code></pre></div>
 
-<ul>
-<li>Fork the repo</li>
-<li>Clone to your machine</li>
-<li>Make a new branch</li>
-<li>Edit code and stuff</li>
-<li>Push back up to your account</li>
-<li>Send pull request to sckott/pytaxize (Python) or ropensci/taxize (R)</li>
-</ul>
+<p>Or clone the repo down and use <code>devtools</code> to install locally, or use <code>R CMD INSTALL</code> to install from the terminal.</p>
+
+<h2>Python</h2>
+
+<p>Stable version from pypi</p>
+
+<div class="highlight"><pre><code class="python"><span class="n">pip</span> <span class="n">install</span> <span class="n">pytaxize</span>
+</code></pre></div>
+
+<p>Development version</p>
+
+<div class="highlight"><pre><code class="python"><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sckott</span><span class="o">/</span><span class="n">pytaxize</span><span class="o">.</span><span class="n">git</span><span class="c">#egg=pytaxize</span>
+</code></pre></div>
+
+<p>Or clone the repo down and do <code>make</code> within the repo folder.</p>
 
 </div>
 
