@@ -3,6 +3,8 @@ layout: page
 title: Sources
 ---
 
+The following are the data sources currently available from `taxize` or `pytaxize`. Get in touch with Scott ([Github R](https://github.com/ropensci/taxize), [Github Python](https://github.com/sckott/pytaxize), [email](mailto:scott@ropensci.org), [twitter](https://twitter.com/recology_)) if you want another added. Ideally the new one you have in mind has a REST API so we can quickly incorporate it. 
+
 <table>
 <colgroup>
 <col style="text-align:left;"/>

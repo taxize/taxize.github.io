@@ -1,37 +1,130 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
- <title>taxize</title>
- <link href="http://recology.info/taxize//atom.xml" rel="self"/>
- <link href="http://recology.info/taxize//"/>
- <updated>2014-04-19T08:56:15-07:00</updated>
- <id>http://recology.info/taxize/</id>
- <author>
-   <name>Scott Chamberlain</name>
-   <email></email>
- </author>
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
- 
- <entry>
-   <title>Working with taxonomic ids</title>
-   <link href="http://recology.info/taxize//2014/04/19/ids/"/>
-   <updated>2014-04-19T00:00:00-07:00</updated>
-   <id>http://recology.info/taxize//2014/04/19/ids</id>
-   <content type="html">&lt;h2&gt;taxize tries to make it easy to get identifiers from the various database sources&lt;/h2&gt;
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-&lt;p&gt;Here, get identifiers from 5 different sources for &lt;em&gt;Poa annua&lt;/em&gt;. Then we can pass those ideas to other functions that act on those ids without any other input&lt;/p&gt;
+  <title>
+    
+      Examples &middot; taxize
+    
+  </title>
 
-&lt;p&gt;&lt;em&gt;p.s. this also demonstrates the interactive prompt, as you&amp;#39;ll see&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;library&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;taxize&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Poa annua&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; db &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ncbi&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;itis&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;col&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;eol&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;tropicos&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;##      colid      name    rank        status    acc_name
-## 1  9791858 Poa annua Species accepted name        &amp;lt;NA&amp;gt;
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>taxize</h1>
+      <p class="lead">taxonomic toolbelt for R and Python</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+        <a href="/">Home</a>
+      </li>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/Contribute/">Contribute</a>
+            </li>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/Install/">Install</a>
+            </li>
+          
+        
+      
+        
+          
+            <li class="sidebar-nav-item">
+              <a href="/Sources/">Sources</a>
+            </li>
+          
+        
+      
+
+      <!-- <li class="sidebar-nav-item"><a href="https://github.com/ropensci/taxize/archive/v.zip">Download</a></li> -->
+      <!-- <li class="sidebar-nav-item"><a href="https://github.com/ropensci/taxize">GitHub project</a></li> -->
+      <!-- <li class="sidebar-nav-item">R: v0.2.2</li>
+      <li class="sidebar-nav-item">Python: v0.0.1</li> -->
+      <li class="sidebar-nav-item"><a href="/examples">Examples</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="//2014/04/19/ids/">
+        Working with taxonomic ids
+      </a>
+    </h1>
+
+    <!-- <span class="post-date">19 Apr 2014</span> -->
+
+    <h2>taxize tries to make it easy to get identifiers from the various database sources</h2>
+
+<p>Here, get identifiers from 5 different sources for <em>Poa annua</em>. Then we can pass those ideas to other functions that act on those ids without any other input</p>
+
+<p><em>p.s. this also demonstrates the interactive prompt, as you&#39;ll see</em></p>
+<div class="highlight"><pre><code class="r language-r" data-lang="r">library<span class="p">(</span>taxize<span class="p">)</span>
+out <span class="o">&lt;-</span> get_ids<span class="p">(</span>names <span class="o">=</span> <span class="s">&quot;Poa annua&quot;</span><span class="p">,</span> db <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;ncbi&quot;</span><span class="p">,</span> <span class="s">&quot;itis&quot;</span><span class="p">,</span> <span class="s">&quot;col&quot;</span><span class="p">,</span> <span class="s">&quot;eol&quot;</span><span class="p">,</span> <span class="s">&quot;tropicos&quot;</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">##      colid      name    rank        status    acc_name
+## 1  9791858 Poa annua Species accepted name        &lt;NA&gt;
 ## 2 10003530 Poa annua Species       synonym Poa infirma
 ##       eolid                                   name source
 ## 1  43530222                           Poa annua L.   GBIF
 ## 2  46196944                           Poa annua L.   ITIS
 ## 3  53014630                           Poa annua L.    COL
-## 4  43531857       Poa aestivalis J.Presl &amp;amp; C.Presl   GBIF
+## 4  43531857       Poa aestivalis J.Presl &amp; C.Presl   GBIF
 ## 5  43530223 Poa annua var. rigidiuscula L.H. Dewey   GBIF
 ## 6  43530884            Poa royleana Nees ex Steud.   GBIF
 ## 7  43531303                       Poa meyenii Nees   GBIF
@@ -96,10 +189,10 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 54  50315616      Poa annua fo. purpurea          fo.   No opinion
 ## 55 100386563      Poa annua var. arenosa         var.      Invalid
 ## 56 100386564     Poa annua var. alpigena         var.   No opinion
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;get classification from ITIS&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;classification&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;itis&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;## $`Poa annua`
+</code></pre></div>
+<h2>get classification from ITIS</h2>
+<div class="highlight"><pre><code class="r language-r" data-lang="r">classification<span class="p">(</span>out<span class="o">$</span>itis<span class="p">)</span>
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">## $`Poa annua`
 ##         rankName       taxonName    tsn
 ## 1        Kingdom         Plantae 202422
 ## 2     Subkingdom  Viridaeplantae 846492
@@ -113,10 +206,10 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 10        Family         Poaceae  40351
 ## 11         Genus             Poa  41074
 ## 12       Species       Poa annua  41107
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;get synonyms from Tropicos&lt;/h2&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;synonyms&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;tropicos&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;## $`Poa annua`
+</code></pre></div>
+<h2>get synonyms from Tropicos</h2>
+<div class="highlight"><pre><code class="r language-r" data-lang="r">synonyms<span class="p">(</span>out<span class="o">$</span>tropicos<span class="p">)</span>
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">## $`Poa annua`
 ##       NameId              ScientificName
 ## 1   25503923                 Aira pumila
 ## 8   25503925                 Aira pumila
@@ -145,10 +238,10 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ##                      ScientificNameWithAuthors  Family
 ## 1                            Aira pumila Pursh Poaceae
 ## 8                   Aira pumila Vill. ex Trin. Poaceae
-## 9     Catabrosa pumila (Pursh) Roem. &amp;amp; Schult. Poaceae
+## 9     Catabrosa pumila (Pursh) Roem. &amp; Schult. Poaceae
 ## 16           Eragrostis infirma (Kunth) Steud. Poaceae
 ## 20                   Festuca tenuiculmis Tovar Poaceae
-## 21 Megastachya infirma (Kunth) Roem. &amp;amp; Schult. Poaceae
+## 21 Megastachya infirma (Kunth) Roem. &amp; Schult. Poaceae
 ## 24               Ochlopoa annua (L.) H. Scholz Poaceae
 ## 28                     Poa aestivalis J. Presl Poaceae
 ## 39                     Poa algida (Sol.) Rupr. Poaceae
@@ -164,16 +257,16 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 79                       Poa hohenackeri Trin. Poaceae
 ## 81                            Poa humilis Lej. Poaceae
 ## 82                           Poa infirma Kunth Poaceae
-## 87                    Poa meyenii Nees &amp;amp; Meyen Poaceae
+## 87                    Poa meyenii Nees &amp; Meyen Poaceae
 ## 93                         Poa puberula Steud. Poaceae
 ## 94                 Poa royleana Nees ex Steud. Poaceae
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Many names&lt;/h2&gt;
+</code></pre></div>
+<h2>Many names</h2>
 
-&lt;p&gt;In this case get many identifiers for many names, then pass in identifiers to get many classifications&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;mynames &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Helianthus annuus&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Pinus contorta&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Collomia grandiflora&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;names &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; mynames&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; db &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; c&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;ncbi&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;itis&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;col&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;eol&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;tropicos&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;##       eolid                                                         name
+<p>In this case get many identifiers for many names, then pass in identifiers to get many classifications</p>
+<div class="highlight"><pre><code class="r language-r" data-lang="r">mynames <span class="o">&lt;-</span> c<span class="p">(</span><span class="s">&quot;Helianthus annuus&quot;</span><span class="p">,</span> <span class="s">&quot;Pinus contorta&quot;</span><span class="p">,</span> <span class="s">&quot;Collomia grandiflora&quot;</span><span class="p">)</span>
+out <span class="o">&lt;-</span> get_ids<span class="p">(</span>names <span class="o">=</span> mynames<span class="p">,</span> db <span class="o">=</span> c<span class="p">(</span><span class="s">&quot;ncbi&quot;</span><span class="p">,</span> <span class="s">&quot;itis&quot;</span><span class="p">,</span> <span class="s">&quot;col&quot;</span><span class="p">,</span> <span class="s">&quot;eol&quot;</span><span class="p">,</span> <span class="s">&quot;tropicos&quot;</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">##       eolid                                                         name
 ## 1  43835813                                         Helianthus annuus L.
 ## 2  46180859                                         Helianthus annuus L.
 ## 3  52926497                                         Helianthus annuus L.
@@ -282,8 +375,8 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 8  100314141   Collomia grandiflora fo. tenuiflora  fo. No opinion
 ## 9  100314142     Collomia grandiflora var. diffusa var. No opinion
 ## 10 100314143  Collomia grandiflora var. tenuiflora var. No opinion
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;r language-r&quot; data-lang=&quot;r&quot;&gt;classification&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;out&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;## $ncbi
+</code></pre></div><div class="highlight"><pre><code class="r language-r" data-lang="r">classification<span class="p">(</span>out<span class="p">)</span>
+</code></pre></div><div class="highlight"><pre><code class="text language-text" data-lang="text">## $ncbi
 ## $ncbi$`Helianthus annuus`
 ##          ScientificName         Rank    UID
 ## 1    cellular organisms      no rank 131567
@@ -425,10 +518,10 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 
 ## $eol
 ## $eol$`Helianthus annuus`
-## [1] &amp;quot;No hierarchy information for 43835813&amp;quot;
+## [1] &quot;No hierarchy information for 43835813&quot;
 ## 
 ## $eol$`Pinus contorta`
-## [1] &amp;quot;No hierarchy information for 44398364&amp;quot;
+## [1] &quot;No hierarchy information for 44398364&quot;
 ## 
 ## $eol$`Collomia grandiflora`
 ##     taxonID  scientificName     taxonRank
@@ -471,8 +564,20 @@ out &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; get_ids&lt;span class
 ## 4  43000048       Ericales      order
 ## 5  42000286  Polemoniaceae     family
 ## 6  40012270       Collomia      genus
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
- </entry>
- 
+</code></pre></div>
+  </div>
+  
+</div>
 
-</feed>
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+    </div>
+
+  </body>
+</html>

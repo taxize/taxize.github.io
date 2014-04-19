@@ -69,6 +69,10 @@
       
         
           
+        
+      
+        
+          
             <li class="sidebar-nav-item">
               <a href="/Install/">Install</a>
             </li>
@@ -88,24 +92,14 @@
       <!-- <li class="sidebar-nav-item"><a href="https://github.com/ropensci/taxize">GitHub project</a></li> -->
       <!-- <li class="sidebar-nav-item">R: v0.2.2</li>
       <li class="sidebar-nav-item">Python: v0.0.1</li> -->
+      <li class="sidebar-nav-item"><a href="/examples">Examples</a></li>
     </ul>
   </div>
 </div>
 
 
     <div class="content container">
-      <div class="posts">
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/2012/02/07/taxize/">
-        
-      </a>
-    </h1>
-
-    <!-- <span class="post-date">07 Feb 2012</span> -->
-
-    <!-- <i class="fa fa-bars"></i> -->
+      <!-- <i class="fa fa-bars"></i> -->
 
 <blockquote>
 <p>taxize is a taxonomic toolbelt for R and Python</p>
@@ -125,7 +119,9 @@
 <span class="nx">col_children</span><span class="p">(</span><span class="nv">name = </span><span class="s">&quot;Apis&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>And you get </p>
+
+And you get 
+
 
 <div class="highlight"><pre><code class="coffee">       <span class="nx">id</span>                <span class="nx">name</span>     <span class="nx">rank</span>
 <span class="mi">0</span>  <span class="mi">6971712</span>  <span class="nx">Apis</span> <span class="nx">andreniformis</span>  <span class="nx">Species</span>
@@ -137,13 +133,17 @@
 <span class="mi">6</span>  <span class="mi">6971717</span>    <span class="nx">Apis</span> <span class="nx">nigrocincta</span>  <span class="nx">Species</span>
 </code></pre></div>
 
-<p>Awesome eh!?</p>
 
-<h3>Python</h3>
+Awesome eh!?
+
+### Python
+
 
 <div class="highlight"><pre><code class="python"><span class="kn">import</span> <span class="nn">pytaxize</span>
 <span class="n">pytaxize</span><span class="o">.</span><span class="n">col_children</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Apis&quot;</span><span class="p">])</span>
 </code></pre></div>
+
+
 
 <div class="highlight"><pre><code class="python"><span class="p">[</span>        <span class="nb">id</span>                <span class="n">name</span>     <span class="n">rank</span>
 <span class="mi">0</span>  <span class="mi">6971712</span>  <span class="n">Apis</span> <span class="n">andreniformis</span>  <span class="n">Species</span>
@@ -155,22 +155,23 @@
 <span class="mi">6</span>  <span class="mi">6971717</span>    <span class="n">Apis</span> <span class="n">nigrocincta</span>  <span class="n">Species</span><span class="p">]</span>
 </code></pre></div>
 
-<hr>
 
-<p>Want to see something else added? Open an <a href="https://github.com/ropensci/taxize/issues/new">R</a> or <a href="https://github.com/sckott/pytaxize/issues/new">Python</a> issue.</p>
+-----
 
-  </div>
+Want to see something else added? Open an <a href="https://github.com/ropensci/taxize/issues/new">R</a> or <a href="https://github.com/sckott/pytaxize/issues/new">Python</a> issue.
+
+<!-- <div class="posts">
   
 </div>
 
-<!-- <div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
-</div> -->
+<p><div class="pagination"></p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;span class=&quot;pagination-item older&quot;&gt;Older&lt;/span&gt;
+
+
+&lt;span class=&quot;pagination-item newer&quot;&gt;Newer&lt;/span&gt;
+</code></pre></div>
+<p></div> --&gt;</p>
+
     </div>
 
   </body>

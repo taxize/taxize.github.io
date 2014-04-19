@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Home
+title: Examples
 ---
 
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
     <h1 class="post-title">
-      <a href="{{ post.url }}">
+      <a href="/{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
@@ -19,7 +19,7 @@ title: Home
   {% endfor %}
 </div>
 
-<!-- <div class="pagination">
+<div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
   {% else %}
@@ -34,4 +34,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div> -->
+</div>
