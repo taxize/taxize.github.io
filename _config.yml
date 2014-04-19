@@ -25,3 +25,9 @@ pythonversion:     0.0.1
 
 github:
   repo:           https://github.com/ropensci/taxize
+
+
+# knitr integration
+gems: ['jekyll-knitr']
+
+keep_files:  ['.git','figures']
