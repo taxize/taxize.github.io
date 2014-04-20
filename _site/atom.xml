@@ -4,13 +4,29 @@
  <title>taxize</title>
  <link href="http://recology.info/taxize//atom.xml" rel="self"/>
  <link href="http://recology.info/taxize//"/>
- <updated>2014-04-19T11:40:41-07:00</updated>
+ <updated>2014-04-19T18:30:55-07:00</updated>
  <id>http://recology.info/taxize/</id>
  <author>
    <name>Scott Chamberlain</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Stuff</title>
+   <link href="http://recology.info/taxize//examples/stuff/"/>
+   <updated>2014-04-19T00:00:00-07:00</updated>
+   <id>http://recology.info/taxize//examples/stuff</id>
+   <content type="html">## stufadfaf
+
+a
+sdfasfd
+
+
+```{r}
+print(&quot;foobar&quot;)
+```</content>
+ </entry>
  
  <entry>
    <title>Working with taxonomic ids</title>
